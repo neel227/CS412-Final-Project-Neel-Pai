@@ -1,0 +1,50 @@
+Probabilistic Functional Programming in Haskell
+
+Original PFP Author:
+Martin Erwig, Oregon State University, erwig@eecs.oregonstate.edu
+
+
+These files have been tested with GHC 6.4
+
+Core Library files:
+
+Show.hs		Pretty Printing
+ListUtils.hs	
+PrintList.hs	
+Probability.hs	Core probabilistic module
+Visualize.hs	Visualization system for use with R
+
+Examples:
+
+Barber.hs		An example of the queueing system
+Boys.hs			A statistical examples
+NBoys.hs		A generalized version of the previous
+Collection.hs		Collections and two examples:
+Dice.hs			Rolling dice
+MontyHall.hs		The "Monty Hall" Game (statistical)
+TreeGrowth.hs		A simple tree growth example
+
+Neel's incremental work was as follows:
+
+1. Updated Libraries and packages so all imports functioned correctly.
+2. Built YAML file and directories to correctly set up a Main.hs file to run and test functions.
+3. Within the probability.hs file:
+
+- Added some up-front Monad functions (e.g. applicative, alternative) to help fix flow of Monad logic
+- Added new distributions (gamma, log-gamma, beta) to the set of default distributions
+- Built a few print functions to better output distributions.
+
+4. Within other files:
+
+- Generalized Monty Hall Problem to accept an input n to determine number of doors (rather than defaulting to 3)
+- Built dicesums functions within dice to create a distribution according to dice sums, rather than individual numbers on dice
+- Built a new file for playing blackjack
+- Built a new file, Coupons.hs, to simulate the coupon collector’s problem.
+
+5. Within the Main.hs file:
+
+- Built a menu of tests for each of the given simulations
+- For Monty Hall, built both a test of probabilities and also allowed users to play the game themselves.
+- Built a fully functioning blackjack game
+- Built a full test of the Coupon Collector Problem
+
